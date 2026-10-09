@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.8)
+project(ros2_cpp)
+add_executable(ros2_cpp_node ros2_cpp_node.cpp)
+find_package(rclcpp REQUIRED)
+target_link_libraries(ros2_cpp_node rclcpp::rclcpp)
+message(STATUS ${rclcpp_INCLUDE_DIRS})
